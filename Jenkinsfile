@@ -10,6 +10,7 @@ pipeline {
             }
         }
         stage('push') {
+             steps {
                 echo 'Running push...'
                 sh 'docker tag jenkinsimage gevala/jenkinsimage:${BUILD_ID}'
                 sh 'docker login -u="gevala" -p="675955161-Dcg"'
