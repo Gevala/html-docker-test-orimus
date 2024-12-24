@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'Deploying the application...'
                 
-               sh 'ssh -o StrictHostKeyChecking=no -i "../My_Key1.pem" ec2-user@ec2-35-159-124-138.eu-central-1.compute.amazonaws.com -t "docker ps -aq | xargs docker rm -f; docker run -p 80:80 -d gevala/jenkinsimage:${BUILD_ID}"'
+               sh 'ssh -o StrictHostKeyChecking=no -i "../My_Key1.pem" ec2-user@ec2-3-121-116-156.eu-central-1.compute.amazonaws.com -t "docker ps -aq | xargs docker rm -f; docker run -p 80:80 -d gevala/jenkinsimage:${BUILD_ID}"'
                 
             }
         }
